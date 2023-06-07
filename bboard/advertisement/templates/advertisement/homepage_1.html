@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<h1>
+  Список объявлений
+</h1>
+{%  for i in block_content %}
+{% for url in urls %}
+<ul>
+
+  <li>
+    <a href ='{{url}}'> {{ block }} </a>
+    </li>
+
+</ul>
+  {% endfor %}
+{% endfor %}
+<title>Homepage</title>
+</html>

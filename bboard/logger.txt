@@ -1,0 +1,492 @@
+ip: 127.0.0.1
+time = 2023-06-06 14:07:27.116504
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:07:38.698457
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:07:51.936274
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:29.897478
+URL: http://127.0.0.1:8000/advertisement_one/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:34.194477
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:37.173475
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:38.937474
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:40.247479
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:54.015465
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:42:55.389464
+URL: http://127.0.0.1:8000/advertisement_one/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:43:33.600442
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 14:49:22.739279
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 15:16:02.218623
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 15:16:59.984739
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 15:18:30.626316
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:10:40.324258
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:11:18.189950
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:11:22.196930
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:12:56.149353
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:12:57.477349
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:12:58.781336
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:12:59.690331
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:01.703317
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:02.654313
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:06.187291
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:07.777281
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:11.008267
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:11.747257
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:41.353075
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:43.264065
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:44.435059
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:45.146059
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:46.486046
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:13:47.165046
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:17.459856
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:19.340845
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:20.384838
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:21.323833
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:22.335826
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:14:23.347821
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:20.083183
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:22.302928
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:25.326922
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:26.327796
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:28.051208
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:29.086290
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:30.823053
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:35.931751
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:39.902589
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:20:41.440898
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:30:15.468469
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:30:18.204457
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:30:19.893447
+URL: http://127.0.0.1:8000/advertisement_three/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:30:21.137441
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:30:22.775430
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:26.162101
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:27.553095
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:28.225096
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:29.241086
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:30.263081
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:31.493075
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:32.245070
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:33.481064
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:34.216060
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:53.552960
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:57.672939
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:31:59.303929
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:32:00.990922
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:32:03.401909
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:32:04.523902
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:32:05.240901
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:32:06.536892
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:38:10.094002
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:38:22.552260
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:39:08.267553
+URL: None 
+method: POST
+ip: 127.0.0.1
+time = 2023-06-06 16:39:21.448767
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:39:35.859913
+URL: None 
+method: POST
+ip: 127.0.0.1
+time = 2023-06-06 16:40:53.768149
+URL: None 
+method: POST
+ip: 127.0.0.1
+time = 2023-06-06 16:41:54.010626
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:51:51.460334
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 16:51:59.603024
+URL: http://127.0.0.1:8000/regions/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:14.101700
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:15.408679
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:16.664659
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:17.649641
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:18.219632
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:20.231598
+URL: http://127.0.0.1:8000/advertisement_four/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:21.221583
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:37.902305
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:44.181201
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:46.593161
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:47.967139
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:01:49.175118
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:02:15.464910
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:02:43.882689
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:02:50.203647
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:02:57.703588
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:02:59.950566
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:01.229557
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:27.287358
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:29.321343
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:31.785325
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:32.788316
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:47.851204
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:03:48.596196
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:04:16.364990
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:04:17.915981
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:27.813448
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:29.080433
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:30.747421
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:31.799412
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:32.565407
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:33.818398
+URL: http://127.0.0.1:8000/about/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:05:34.622392
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:12:15.086678
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:12:17.174673
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:12:18.834666
+URL: http://127.0.0.1:8000/advertisements/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:12:19.544665
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:59:43.080182
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 17:59:45.040170
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 18:00:17.876598
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 18:00:31.792985
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-06 18:00:52.021097
+URL: http://127.0.0.1:8000/ 
+method: GET

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<h1>
+  Список объявлений
+</h1>
+{%  for key,value in data.items %}
+<ul>
+
+  <li>
+    <a href ={{key}}> {{ value }} </a>
+    </li>
+
+</ul>
+{% endfor %}
+<title>Homepage</title>
+</html>
