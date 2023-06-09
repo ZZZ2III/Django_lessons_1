@@ -2,14 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from django.views.generic import TemplateView
+from advertisement.models import Advertisement
+
 import random
 
 
 # Create your views here.
 
 def advertisement_list(request, *args, **kwargs):
-    listq = ['Мастер на час', 'Выведение из запоя', 'Услоги экскаватора погрузчика', "Услуги кошки"]
-    return render(request, 'advertisement/advertisement_list.html', {'listiq': listq})
+    advertisements = Advertisement.objects.all()
+    return render(request,'advertisement/mod_adv.html',{'advertisements':advertisements})
 
 
 def rand_advertisement_list(request, *args, **kwargs):
@@ -19,10 +21,10 @@ def rand_advertisement_list(request, *args, **kwargs):
 
 
 def homepage(request):
-    urls = ['advertisement_one/', 'advertisement_two/', 'advertisement_three/', 'advertisement_four/',
-            'advertisement_five/', 'regions/', 'about/', 'advertisements/','contacts/']
-    block_content = ['Первое объявление', 'Второе объявление', 'Третье объявление', 'Четвертое объявление',
-                     'Пятое объявление', 'Регионы', 'About', 'Домашняя работа','Контакты']
+    urls = ['/mod_adv','advertisement_two/', 'advertisement_three/', 'advertisement_four/',
+            'advertisement_five/', 'regions/', 'about/', 'advertisements/', 'contacts/']
+    block_content = ['Бесплатные объявления','Второе объявление', 'Третье объявление', 'Четвертое объявление',
+                     'Пятое объявление', 'Регионы', 'About', 'Домашняя работа','Контакты', 'Использование модели']
     data = {}
     for i in range(len(urls)):
         data[urls[i]] = block_content[i]

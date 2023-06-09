@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('advertisement_one/', views.advertisement_list, name='advertisement_one'),
+    #path('advertisement_one/', views.advertisement_list, name='advertisement_one'),
     path('advertisement_two/', views.rand_advertisement_list, name='advertisement_two'),
     path('advertisement_three/', views.rand_advertisement_list, name='advertisement_three'),
     path('advertisement_four/', views.rand_advertisement_list, name='advertisement_four'),
@@ -13,6 +13,7 @@ urlpatterns = [
     path('about/', views.About.as_view(), name='About'),
     path('regions/', views.Regions.as_view(), name='regions'),
     path('advertisements/', views.Counter.as_view(), name='advertisements'),
-    path('contacts/', views.Templ.as_view(),name ='contacts')
+    path('contacts/', views.Templ.as_view(),name ='contacts'),
+    path('mod_adv/', views.advertisement_list,name = 'free_advertisements'),
 
 ]
