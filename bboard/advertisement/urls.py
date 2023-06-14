@@ -15,5 +15,6 @@ urlpatterns = [
     path('advertisements/', views.Counter.as_view(), name='advertisements'),
     path('contacts/', views.Templ.as_view(),name ='contacts'),
     path('mod_adv/', views.advertisement_list,name = 'free_advertisements'),
+    path('test/',views.testing,name = 'mytest')
 
 ]
