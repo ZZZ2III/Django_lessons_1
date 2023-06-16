@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<html>
+<h1>Бесплатные объявления</h1>
+{% if adv_list %}
 <ul>
-{% for list in listiq %}
+    {% for advertisement in adv_list %}
     <li>
-        {{ list }}
+        <a href = "/advertisement_list/{{advertisement.id}}">{{advertisement.title}}</a>
     </li>
-    {% endfor %}
+    {%endfor%}
 </ul>
-<title>
-   {{list}}
-</title>
-<hr>
-<a href="http://127.0.0.1:8000/">Главная</a>
+{% else %}
+<p>Объявлений нет</p>
+{% endif %}
 </html>

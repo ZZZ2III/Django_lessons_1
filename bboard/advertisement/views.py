@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
-from django.views.generic import TemplateView
-from advertisement.models import Advertisement,My_testing_model
+from django.views.generic import TemplateView,ListView,DetailView
+from advertisement.models import Advertisement, My_testing_model
 
 import random
 
@@ -20,14 +20,14 @@ def testing(request,*args,**kwargs):
 def rand_advertisement_list(request, *args, **kwargs):
     listq = ['Мастер на час', 'Выведение из запоя', 'Услоги экскаватора погрузчика', "Услуги кошки"]
     random.shuffle(listq)
-    return render(request, 'advertisement/advertisement_list.html', {'listiq': listq})
+    return render(request, 'advertisement/my_advertisement_list.html', {'listiq': listq})
 
 
 def homepage(request):
     urls = ['/mod_adv','advertisement_two/', 'advertisement_three/', 'advertisement_four/',
-            'advertisement_five/', 'regions/', 'about/', 'advertisements/', 'contacts/','test/']
+            'advertisement_five/', 'regions/', 'about/', 'advertisements/', 'contacts/','test/', '/advertisement_list']
     block_content = ['Бесплатные объявления','Второе объявление', 'Третье объявление', 'Четвертое объявление',
-                     'Пятое объявление', 'Регионы', 'About', 'Домашняя работа','Контакты', 'Использование модели','Test']
+                     'Пятое объявление', 'Регионы', 'About', 'Домашняя работа','Контакты', 'Использование модели','Generic_view']
     data = {}
     for i in range(len(urls)):
         data[urls[i]] = block_content[i]
@@ -101,3 +101,12 @@ class Templ(TemplateView):
         context['phone_number'] = '875875875875'
         context['email'] = 'dogg@mail.ru'
         return context
+
+class AdvertisementListView(ListView):
+    model = Advertisement
+    template_name = 'advertisement_list.html'
+    context_object_name = 'adv_list'
+    #queryset = Advertisement.objects.all()[5:]
+
+class AdvertisementDataView(DetailView):
+    model = Advertisement
