@@ -4,7 +4,7 @@
 <ul>
     {% for advertisement in adv_list %}
     <li>
-        <a href = "/advertisement_list/{{advertisement.id}}">{{advertisement.title}}</a>
+        <a href = "/advertisement_list/{{advertisement.id}}">{{advertisement.title}} </a> | {{advertisement.price}} | {{advertisement.rubrik}}
     </li>
     {%endfor%}
 </ul>
