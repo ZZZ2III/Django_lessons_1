@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advertisement</title>
+</head>
+<h2>Adverisement</h2>
+<body>
+<form method="post" action="/profiles/advertisement">
+    {% csrf_token %}
+    {{ adv_form.as_p }}
+    <button type="submit">Запись в модель</button>
+</form>
+</body>
+</html>

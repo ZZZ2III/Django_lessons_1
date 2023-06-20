@@ -15,7 +15,7 @@ class Advertisement(models.Model):
                                related_name='advertisement', verbose_name='Статус')
     author = models.ForeignKey('Author', on_delete=models.CASCADE, verbose_name='Автор', default=None, null=True,related_name='author')
     rubrik = models.ForeignKey('Rubrik', on_delete=models.CASCADE, verbose_name='Рубрика', default=None, null=True,related_name='rubrik')
-
+    type = models.OneToOneField('Advertisement_type1',on_delete=models.CASCADE,verbose_name='Тип',default=None,null = True,related_name='type')
     class Meta:
         db_table = 'advertisement'
         ordering = ['title']
@@ -48,7 +48,7 @@ class Regions(models.Model):
 
 class Advertisement_type1(models.Model):
     name = models.CharField(max_length=20)
-    conn = models.OneToOneField(Advertisement, on_delete=models.CASCADE, related_name='advertisement')
+    #conn = models.OneToOneField(Advertisement, on_delete=models.CASCADE, related_name='advertisement')
 
     def __str__(self):
         return self.name

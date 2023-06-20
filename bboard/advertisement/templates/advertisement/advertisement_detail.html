@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{object.title}}</title>
+    <title>{{advertisement.title}}</title>
 </head>
 <body>
 
-<h1>{{object.title}}</h1>
-<p>{{object.name}}</p>
-<p>{{object.description}}</p>
-<p>{{object.price}}</p>
-<p>{{object.type}}</p>
-<p>{{object.author}} {{object.email}} {{object.phone_nubmer}}</p>
-<p>{{object.veiws_count}}</p>
+<h1>Заголовок {{advertisement.title}}</h1>
+<p>Кто продает {{advertisement.name}}</p>
+<p>Описание товара {{advertisement.description}}</p>
+<p>Цена {{advertisement.price}}</p>
+<p>Тип {{advertisement.type.name}}</p>
+<p>Контактная информация {{advertisement.author.name}} {{advertisement.author.email}} {{advertisement.author.phone_nubmer}}</p>
+<p>Количество просмотров {{advertisement.veiws_count}}</p>
 </body>
+<a href="http://127.0.0.1:8000/">Главная</a>
+
 </html>

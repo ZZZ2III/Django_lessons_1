@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from app_profiles.views import UserFromView,AdvertisementFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('advertisement.urls'))
+    path('', include('advertisement.urls')),
+    path('profiles/register', UserFromView.as_view()),
+    path('profiles/advertisement', AdvertisementFormView.as_view()),
 ]
