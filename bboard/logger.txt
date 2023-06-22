@@ -2226,3 +2226,47 @@ ip: 127.0.0.1
 time = 2023-06-20 18:26:26.119213
 URL: http://127.0.0.1:8000/profiles/advertisement 
 method: GET
+ip: 127.0.0.1
+time = 2023-06-22 14:22:40.024297
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 14:22:40.214295
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 14:22:40.606296
+URL: http://127.0.0.1:8000/profiles/1/edit/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 17:35:00.244578
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 17:35:00.307582
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:03:17.233538
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:03:33.820540
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:03:46.690405
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:04:05.836527
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:11:10.331753
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-22 18:11:10.362754
+URL: None 
+method: GET

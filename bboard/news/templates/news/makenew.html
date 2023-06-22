@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание новости</title>
+</head>
+<body>
+<h2>Создайте новость</h2>
+<form method="post" action="/news/makenew">
+    {% csrf_token %}
+    {{ news_form.as_p }}
+     <button type = 'submit'>Добавить</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавьте комментарий</title>
+</head>
+<body>
+<form method="post" action="news/makecomm">
+  {% csrf_token %}
+    {{comms_form.as_p}}
+</form>
+<button type="submit">Добавить комментарий</button>
+</body>
+</html>
