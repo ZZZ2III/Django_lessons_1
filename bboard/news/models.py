@@ -20,4 +20,4 @@ class NewsModel(models.Model):
 class CommentsModel(models.Model):
     name = models.CharField(max_length=20)
     text = models.TextField()
-    news = models.ForeignKey('NewsModel',on_delete=models.CASCADE)
+    news = models.ForeignKey('NewsModel', on_delete=models.CASCADE)

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все новости</title>
+</head>
+{% if newsmodel %}
+<body>
+<p>{{newsmodel.title}}</p>
+<p>{{newsmodel.contenct}}</p>
+<p>{{newsmodel.datecreated}}</p>
+<p>{{newsmodel.date_redacted}}</p>
+<p>{{newsmodel.flag_active}}</p>
+{% else %}
+<p>Новостей нет</p>
+{% endif %}
+{% for i in newsmodel.commentsmodel %}
+<p>{{newsmodel.commentsmodel.name}}</p>
+<p>{{newsmodel.commentsmodel.text}}</p>
+{% endfor %}
+</body>
+</html>

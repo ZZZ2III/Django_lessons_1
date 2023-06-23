@@ -5,10 +5,12 @@
     <title>Добавьте комментарий</title>
 </head>
 <body>
-<form method="post" action="news/makecomm">
+<h2>Создайте комментарий</h2>
+<form method="post" action="">
   {% csrf_token %}
     {{comms_form.as_p}}
-</form>
+
 <button type="submit">Добавить комментарий</button>
+    </form>
 </body>
 </html>
