@@ -9,7 +9,7 @@
 <p>{{newsmodels.as_p}}</p>
 <p>{{newsmodel.all}}</p>
 <p>{{newsmodel.title}}</p>
-<p>{{newsmodel.contenct}}</p>
+<p>{{newsmodel.content}}</p>
 <p>{{newsmodel.datecreated}}</p>
 <p>{{newsmodel.date_redacted}}</p>
 <p>{{newsmodel.flag_active}}</p>
@@ -19,7 +19,7 @@
 <hr>
 {% if newsmodel.comms %}
 {% for i in newsmodel.comms.all %}
-<p>{{i.name}}</p>
+<p>{{i.name}}:</p>
 <p>{{i.text}}</p>
 {% endfor %}
 {% else %}
