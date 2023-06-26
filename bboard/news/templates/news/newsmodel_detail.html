@@ -6,6 +6,8 @@
 </head>
 {% if newsmodel %}
 <body>
+<p>{{newsmodels.as_p}}</p>
+<p>{{newsmodel.all}}</p>
 <p>{{newsmodel.title}}</p>
 <p>{{newsmodel.contenct}}</p>
 <p>{{newsmodel.datecreated}}</p>
@@ -14,9 +16,16 @@
 {% else %}
 <p>Новостей нет</p>
 {% endif %}
-{% for i in newsmodel.commentsmodel %}
-<p>{{newsmodel.commentsmodel.name}}</p>
-<p>{{newsmodel.commentsmodel.text}}</p>
+<hr>
+{% if newsmodel.comms %}
+{% for i in newsmodel.comms.all %}
+<p>{{i.name}}</p>
+<p>{{i.text}}</p>
 {% endfor %}
+{% else %}
+<p>Комментариев нет</p>
+{% endif %}
 </body>
+<hr>
+<a href ='http://127.0.0.1:8000/news/makecomm/'>Написать новый комментарий</a>
 </html>
