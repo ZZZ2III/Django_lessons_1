@@ -3082,3 +3082,79 @@ ip: 127.0.0.1
 time = 2023-06-26 21:37:24.073191
 URL: None 
 method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:10:35.782143
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:10:35.851141
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:10:40.564105
+URL: http://127.0.0.1:8000/admin/login/?next=/admin/ 
+method: POST
+ip: 127.0.0.1
+time = 2023-06-27 17:10:48.332991
+URL: http://127.0.0.1:8000/admin/login/?next=/admin/ 
+method: POST
+ip: 127.0.0.1
+time = 2023-06-27 17:10:49.541963
+URL: http://127.0.0.1:8000/admin/login/?next=/admin/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:10:58.819838
+URL: http://127.0.0.1:8000/admin/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:10:58.947835
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:00.896817
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:01.019814
+URL: http://127.0.0.1:8000/admin/news/newsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:03.464744
+URL: http://127.0.0.1:8000/admin/news/newsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:03.603740
+URL: http://127.0.0.1:8000/admin/news/newsmodel/add/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:29.817328
+URL: http://127.0.0.1:8000/admin/news/newsmodel/add/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:29.910326
+URL: http://127.0.0.1:8000/admin/news/newsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:32.130194
+URL: http://127.0.0.1:8000/admin/news/newsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:32.225191
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:35.464052
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:35.557050
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/?name=Vasiliy+Vas%60kin 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:37.492183
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/?name=Vasiliy+Vas%60kin 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-27 17:11:37.583181
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/?name=%D0%9F%D1%8D%D1%80%D0%B8%D1%81+%D0%A5%D0%B8%D0%BB%D1%82%D0%BE%D0%BD 
+method: GET
