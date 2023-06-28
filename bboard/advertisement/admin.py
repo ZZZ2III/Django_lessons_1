@@ -10,20 +10,41 @@ from advertisement.models import Advertisement, Rubrik, Author, Advertisement_ty
 class AdvertisementAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
     search_fields = ['description']
+    # fieldsets = (
+    #     (
+    #         'Название заголовка',
+    #         {
+    #             'fields': ('title', 'name'),
+    #             'description': 'Описание заголовка',
+    #             #'classes': ['collapse']
+    #         }
+    #     ),
+    #     (
+    #         'Описание товара и цена',
+    #         {
+    #             'fields': ('description', 'price', 'veiws_count'),
+    #             'description': 'Здесь можно увидеть описание товара и цену'
+    #         }
+    #     ),
+    # )
     pass
+
 
 class RubrickAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
     pass
 
+
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
-    search_fields=['name']
+    search_fields = ['name']
     pass
+
 
 class Adv_1Admin(admin.ModelAdmin):
     list_display = ['id', 'name']
     pass
+
 
 admin.site.register(Advertisement, AdvertisementAdmin)
 admin.site.register(Rubrik, RubrickAdmin)

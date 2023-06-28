@@ -27,13 +27,13 @@ class AuthorAdmin(admin.ModelAdmin):
             'Биографические сведения', {
                 'fields': ('university', 'birth_date', 'biography'),
                 'description': 'Различные данные из биографии автора',
-                'classes':['collapse']
+                'classes': ['collapse']
             }
         ),
         (
             'Контакты', {
                 'fields': ('email', 'phone', 'personal_page', 'facebook', 'twitter'),
-                'description':'Как связаться с автором'
+                'description': 'Как связаться с автором'
 
             }
         )
@@ -41,7 +41,21 @@ class AuthorAdmin(admin.ModelAdmin):
 
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'publisher']
+    list_display = ['id', 'title', 'publisher', 'status']
+    actions = ['mark_as_published', 'mark_as_draft', 'mark_as_review']
+
+    def mark_as_published(self, request, queryset):
+        queryset.update(status='p')
+
+    def mark_as_draft(self, request, queryset):
+        queryset.update(status='d')
+
+    def mark_as_review(self, request, queryset):
+        queryset.update(status='r')
+
+    mark_as_published.short_description = 'Перевести в статус Опубликовано'
+    mark_as_draft.short_description = 'Перевести в статус Черновик'
+    mark_as_review.short_description = 'Перевести в статус Ревью'
 
 
 admin.site.register(Publisher, PublisherAdmin)

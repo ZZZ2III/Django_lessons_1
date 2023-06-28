@@ -9,6 +9,12 @@ class NewsModel(models.Model):
     date_redacted = models.DateField(verbose_name='Дата редактирования')
     flag_active = models.BooleanField(verbose_name='Фейк?')
 
+    STATUS_CHOISES = [
+        ['a','Active'],
+        ['i','Incactive']
+
+    ]
+    status = models.CharField(max_length=1, choices=STATUS_CHOISES, default='a')
     class Meta:
         db_table = 'newsmodel'
         ordering = ['date_created']

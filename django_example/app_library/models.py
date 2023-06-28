@@ -18,7 +18,7 @@ class Authors(models.Model):
     last_name = models.CharField(max_length=60, blank=True)
     email = models.EmailField(blank=True)
     biography = models.TextField(blank=True)
-    second_name = models.CharField(max_length=40,default='')
+    second_name = models.CharField(max_length=40, default='')
     phone = models.CharField(max_length=16, blank=True)
     personal_page = models.URLField(blank=True)
     facebook = models.URLField(blank=True)
@@ -33,7 +33,15 @@ class Authors(models.Model):
 
 
 class Book(models.Model):
+    STATUS_CHOISES = [
+        ['d', 'Draft'],
+        ['r', 'Review'],
+        ['p', 'Published']
+
+    ]
+
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Authors)
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)  # , related_name='publisher')
     publication_date = models.DateField()
+    status = models.CharField(max_length=1,choices=STATUS_CHOISES,default='d')
