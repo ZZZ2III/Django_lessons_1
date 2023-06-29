@@ -3422,3 +3422,15 @@ ip: 127.0.0.1
 time = 2023-06-28 17:57:58.646362
 URL: http://127.0.0.1:8000/admin/news/newsmodel/3/change/ 
 method: GET
+ip: 127.0.0.1
+time = 2023-06-28 18:01:35.326941
+URL: http://127.0.0.1:8000/admin/news/commentsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-28 18:01:38.416731
+URL: http://127.0.0.1:8000/admin/news/newsmodel/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-06-28 18:01:38.553730
+URL: http://127.0.0.1:8000/admin/news/newsmodel/add/ 
+method: GET
