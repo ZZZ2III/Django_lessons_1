@@ -1,5 +1,5 @@
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.views import LoginView
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.views import LoginView,LogoutView
 from django.http import HttpResponse
 from django.shortcuts import render
 from app_users.forms import AuthForm
@@ -16,16 +16,16 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user:
                 if user.is_superuser:
-                    print('Ошибка! Нельзя логиниться администраторам')
+                    #print('Ошибка! Нельзя логиниться администраторам')
                     auth_form.add_error('__all__', 'Ошибка! Нельзя логиниться администраторам')
 
                 elif not 8 < datetime.datetime.now().hour < 22:
-                    print('Логиниться можно только с 8-22')
+                    #print('Логиниться можно только с 8-22')
                     auth_form.add_error('__all__', 'Логиниться можно только с 8-22')
 
                 elif user.is_active:
                     login(request, user)
-                    print('Залогинено')
+                    #print('Залогинено')
                     return HttpResponse('Вы успешно вошли в систему')
                 else:
                     auth_form.add_error('__all__', 'Ошибка! Учетная запись не активна')
@@ -40,3 +40,14 @@ def login_view(request):
 
 class AnotherLoginView(LoginView):
     template_name = 'users/login.html'
+
+
+
+def logout_view(request):
+    logout(request)
+    return HttpResponse('Вы вышли из под своей учетной записи')
+
+
+class AnotherLogoutView(LogoutView):
+    #template_name = 'users/logout.html'
+    next_page = '/'

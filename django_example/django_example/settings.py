@@ -123,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 LOGIN_REDIRECT_URL = '/'
+# Сессиии
+SESSION_COOKIE_AGE = 30*24*60*60
+#SESSION_COOKIE_NAME = "django.contrib.sessions.backends.signed_cookies"
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
