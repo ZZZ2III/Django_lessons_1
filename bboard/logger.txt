@@ -3434,3 +3434,35 @@ ip: 127.0.0.1
 time = 2023-06-28 18:01:38.553730
 URL: http://127.0.0.1:8000/admin/news/newsmodel/add/ 
 method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:21:10.044673
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:21:10.142673
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:21:11.673670
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:21:11.881669
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:24:27.200425
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:24:48.259765
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:24:48.280765
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-07-03 17:25:53.291267
+URL: None 
+method: GET

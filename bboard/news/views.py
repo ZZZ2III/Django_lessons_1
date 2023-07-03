@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 from news.forms import NewsForm, CommentsForm
 from news.models import NewsModel,CommentsModel
@@ -43,3 +44,7 @@ class All_news(ListView):
 
 class SortedNews(DetailView):
     model = NewsModel
+
+
+class NewsLoginView(LoginView):
+    pass

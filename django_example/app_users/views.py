@@ -49,5 +49,5 @@ def logout_view(request):
 
 
 class AnotherLogoutView(LogoutView):
-    #template_name = 'users/logout.html'
+    template_name = 'users/logout.html'
     next_page = '/'
