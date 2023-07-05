@@ -9,6 +9,8 @@
 
 {% if request.user.is_authenticated %}
 <h3>Добро пожаловать на сайт {{ request.user.username }}!</h3>
+Вас зовут {{ request.user.first_name }}, ваша фамилия {{ request.user.second_name }} !
+
 <a href = "{% url 'logout' %}">Нажмите чтобы выйти из сессии</a>
 {% else %}
 <h3>Вы не авторизованы на сайте.</h3>

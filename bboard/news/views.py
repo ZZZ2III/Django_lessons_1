@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render
 from news.forms import NewsForm, CommentsForm
 from news.models import NewsModel,CommentsModel
@@ -47,4 +47,10 @@ class SortedNews(DetailView):
 
 
 class NewsLoginView(LoginView):
+    template_name ='news/Login.html'
+
+
+class NewsLogoutView(LogoutView):
+    template_name = 'news/logout.html'
+    next_page = '/news/news_list/'
     pass
