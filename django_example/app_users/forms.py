@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from app_users.models import TestUsers
+#from app_users.models import TestUsers
 
 
 class AuthForm(forms.Form):
@@ -26,5 +26,5 @@ class UserExtendedHomework(UserCreationForm):
     #password = forms.CharField(required=False, widget=forms.PasswordInput)
 
     class Meta:
-        model = TestUsers
-        fields = '__all__'
+        model = User
+        fields = ('username','first_name','second_name','email','password1', 'password2',)

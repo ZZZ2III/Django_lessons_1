@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ваш аккаунт</title>
 </head>
 <body>
-
+{% if request.user.is_authenticated %}
+<h2>Ваше имя {{request.user.username}}</h2>
+Ваше имя {{request.user.username}}
+Ваша фамилия {{request.user.username}}
+Ваша почта {{request.user.username}}
+{% else %}
+Вы не зарегистрированы!
 </body>
+{% endif %}
 </html>

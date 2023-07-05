@@ -4,7 +4,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from app_users.forms import AuthForm, ExtendedRegisterForm, UserExtendedHomework
-from app_users.models import TestUsers
+#from app_users.models import TestUsers
 import datetime
 
 from django.views import View
@@ -106,8 +106,11 @@ class Register(View):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            TestUsers.objects.create(**form.cleaned_data)
-            return redirect('/')
+            #TestUsers.objects.create(**form.cleaned_data)
+            return redirect('users/account/')
 
-        return render(request, 'users/register.html', context={'form': form})
 
+class AccountView(View):
+    def get(self,request):
+        #form = UserExtendedHomework()
+        return render(request, 'users/account.html')#, context={'form': form})
