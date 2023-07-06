@@ -6,10 +6,13 @@
 </head>
 <body>
 {% if request.user.is_authenticated %}
-<h2>Ваше имя {{request.user.username}}</h2>
-Ваше имя {{request.user.username}}
-Ваша фамилия {{request.user.username}}
-Ваша почта {{request.user.username}}
+<h2>Ваше имя {{ request.user.username }}</h2>
+<p>Ваше имя {{ request.user.first_name }}</p>
+<p>Ваша фамилия {{ request.user.last_name }}</p>
+<p>Ваша почта {{ request.user.email }}</p>
+<p>Ваша дата рождения {{ request.user.homeworkmodel.date_of_birth }}</p>
+<p>Ваша скидочная карта {{ request.user.homeworkmodel.credit_card }}</p>
+<p>Ваш номер телефона {{ request.user.homeworkmodel.phone_number}}</p>
 {% else %}
 Вы не зарегистрированы!
 </body>

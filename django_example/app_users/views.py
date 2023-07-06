@@ -3,8 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from app_users.forms import AuthForm, ExtendedRegisterForm, UserExtendedHomework
-#from app_users.models import TestUsers
+from app_users.forms import AuthForm, ExtendedRegisterForm, UserExtendedHomework, RegisterForm
+from app_users.models import Profile,HomeworkModel
+# from app_users.models import TestUsers
 import datetime
 
 from django.views import View
@@ -59,7 +60,7 @@ class AnotherLogoutView(LogoutView):
 
 def register_view(request):  # не работает
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -70,16 +71,23 @@ def register_view(request):  # не работает
             redirect('/')
 
     else:
-        form = UserCreationForm()
+        form = RegisterForm()
         # print('нихуя')
     return render(request, 'users/register.html', context={'form': form})
 
 
-def another_register_view(request):  # не работает
+def another_register_view(request):  #  работает
     if request.method == 'POST':
         form = ExtendedRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            date_of_birth = form.cleaned_data.get('date_of_birth')
+            city = form.cleaned_data.get('city')
+            Profile.objects.create(
+                user=user,
+                city=city,
+                date_of_birth=date_of_birth
+            )
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
@@ -99,18 +107,31 @@ class Register(View):
         return render(request, 'users/register.html', context={'form': form})
 
     def post(self, request):
-        form = UserCreationForm(request.POST)
+        form = UserExtendedHomework(request.POST)
+        # model = User
         if form.is_valid():
-            form.save()
+            user = form.save()
+            date_of_birth = form.cleaned_data.get('date_of_birth')
+            city = form.cleaned_data.get('city')
+            credit_card = form.cleaned_data.get('credit_card')
+            phone_number = form.cleaned_data.get('phone_number')
+            HomeworkModel.objects.create(
+                user = user,
+                city = city,
+                date_of_birth =date_of_birth,
+                credit_card = credit_card,
+                phone_number = phone_number
+            )
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            #TestUsers.objects.create(**form.cleaned_data)
-            return redirect('users/account/')
+
+            return render(request, 'users/account.html')
+
+        return render(request, 'users/register.html', context={'form': form})
 
 
 class AccountView(View):
-    def get(self,request):
-        #form = UserExtendedHomework()
-        return render(request, 'users/account.html')#, context={'form': form})
+    def get(self, request):
+        return render(request, 'users/account.html')

@@ -9,7 +9,10 @@
 
 {% if request.user.is_authenticated %}
 <h3>Добро пожаловать на сайт {{ request.user.username }}!</h3>
-Вас зовут {{ request.user.first_name }}, ваша фамилия {{ request.user.second_name }} !
+<p>Вас зовут {{ request.user.first_name }}</p>
+<p>Ваша фамилия {{ request.user.last_name }} !</p>
+<p>День рождения {{request.user.profile.date_of_birth}}</p>
+<p>Ваш город {{request.user.profile.city}}</p>
 
 <a href = "{% url 'logout' %}">Нажмите чтобы выйти из сессии</a>
 {% else %}
