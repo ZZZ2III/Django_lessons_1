@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Хранение информации о товарах</title>
+</head>
+<body>
+{% if goods_list %}
+<table border="2">
+  <tbody>
+  <tr>
+  <td>Артикул</td>
+  <td>Название</td>
+  <td>Цена</td>
+  </tr>
+  {% for good in goods_list %}
+  <tr>
+  <td>{{good.code}}</td>
+  <td>{{good.title}}</td>
+  <td>{{good.price}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<h2>Данных нет</h2>
+{% endif %}
+</body>
+</html>
