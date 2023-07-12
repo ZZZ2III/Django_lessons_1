@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app_media.forms import UploadFileForm, UploadFileFormHomework
 from django.views import View
+from app_media.models import DocumentForm,File
 from django.http import HttpResponse
 from django.utils.encoding import smart_str
 
@@ -47,3 +48,16 @@ def UploadFileHomework(request):
         'form': upload_file_form
     }
     return render(request, 'upload_file2.html', context=context)
+
+def UploadFileToFolder(request):
+    if request.method == 'POST':
+        upload_file_from = DocumentForm(request.POST, request.FILES)
+        if upload_file_from.is_valid():
+            upload_file_from.save()
+            return redirect('/')
+        else:
+           print (upload_file_from.errors)
+    else:
+        upload_file_from = DocumentForm()
+
+    return render(request,'file_form_upload.html',context={'form':upload_file_from})

@@ -48,12 +48,23 @@ def update_goods(request):
         if upload_goods_form.is_valid():
             price_file = upload_goods_form.cleaned_data['file'].read()
             price_str = price_file.decode('utf-8').split('\n')
-            print(f"Приведенные знаечения { price_file.decode('utf-8')}")
+            #print(f"Приведенные знаечения {price_file.decode('utf-8')}")  # Перевод в человеческий вид
             reader_1 = reader(price_str, delimiter=":", quotechar='"')
+            updated_list = []
+            eror_list = []
             for row in reader_1:
-                print(row)
-                Goods.objects.filter(code=row[0]).update(price=Decimal(row[1]))
-            return HttpResponse(content='Все распарсилось и обновилось', status=200)
+
+                v = Goods.objects.filter(code=row[0]).update(price=Decimal(row[1]))
+                if not v:
+                    eror_list.append(row)
+                if v == 1:
+                    print(row)
+                    updated_list.append(row)
+            code_list = []
+            for i in eror_list:
+                code_list.append(i[0])
+            content = f'Количество обновленных товаров {len(updated_list)}, количество необновленных товаров {len(eror_list)}, Артикулы,которых не было {code_list}'
+            return HttpResponse(content=content, status=200)
 
     else:
         upload_goods_form = UploadPriceForm()

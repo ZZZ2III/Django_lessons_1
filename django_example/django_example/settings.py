@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '+kurpdq$48btc_+c9*8%2n9_4od7he@mz4efkm0)qw@%f1np9&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -41,7 +39,7 @@ INSTALLED_APPS = [
     'app_users',
     'app_employment',
     'app_media',
-    'app_goods'
+    'app_goods',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_example.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -85,7 +82,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -105,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -119,7 +114,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -127,6 +121,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 LOGIN_REDIRECT_URL = '/'
 # Сессиии
-SESSION_COOKIE_AGE = 30*24*60*60
-#SESSION_COOKIE_NAME = "django.contrib.sessions.backends.signed_cookies"
+SESSION_COOKIE_AGE = 30 * 24 * 60 * 60
+# SESSION_COOKIE_NAME = "django.contrib.sessions.backends.signed_cookies"
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+#print(MEDIA_ROOT)
