@@ -1,10 +1,13 @@
 from _csv import reader
 from decimal import Decimal
-from django.shortcuts import render
-from app_goods.models import Item, Goods
+
+from django.core.files.storage import FileSystemStorage
+from django.shortcuts import render, redirect
+from app_goods.models import Item, Goods, GoodsHw
 from app_goods.forms import UploadPriceForm
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
+import datetime
 
 
 # Create your views here.
@@ -48,7 +51,7 @@ def update_goods(request):
         if upload_goods_form.is_valid():
             price_file = upload_goods_form.cleaned_data['file'].read()
             price_str = price_file.decode('utf-8').split('\n')
-            #print(f"Приведенные знаечения {price_file.decode('utf-8')}")  # Перевод в человеческий вид
+            # print(f"Приведенные знаечения {price_file.decode('utf-8')}")  # Перевод в человеческий вид
             reader_1 = reader(price_str, delimiter=":", quotechar='"')
             updated_list = []
             eror_list = []
@@ -63,7 +66,7 @@ def update_goods(request):
             code_list = []
             for i in eror_list:
                 code_list.append(i[0])
-            content = f'Количество обновленных товаров {len(updated_list)}, количество необновленных товаров {len(eror_list)}, Артикулы,которых не было {code_list}'
+            content = f'Количество обновленных товаров {len(updated_list)}, количество необновленных товаров {len(eror_list)}, Артикулы,которых не было {code_list} '
             return HttpResponse(content=content, status=200)
 
     else:
@@ -74,3 +77,33 @@ def update_goods(request):
     }
 
     return render(request, 'homework/goods_update.html', context=context)
+
+
+def update_goods_with_saving(request):
+    if request.method == "POST":
+        update_goods_form = UploadPriceForm(request.POST, request.FILES)
+        if update_goods_form.is_valid():
+            #update_goods_form.save()
+            file = request.FILES['file']
+            price_file = update_goods_form.cleaned_data['file'].read()
+            decoded = price_file.decode('utf-8').split('\n')
+            readed = reader(decoded, delimiter=':', quotechar='"')
+            recent_filename = file.name
+            new_filename = str(datetime.datetime.now().strftime('%d%m%y-%H-%M-%S')) + f'_{recent_filename}'
+
+            fs = FileSystemStorage()
+            filename = fs.save(new_filename,file)
+            #file_url = fs.url(filename)
+            for row in readed:
+                GoodsHw.objects.filter(code=row[0]).update(price=Decimal(row[1]))
+                GoodsHw.objects.filter(code=row[0]).update(file = filename)
+            return redirect('/')
+    else:
+        upload_goods_form = UploadPriceForm()
+
+    return render(request, 'app_goods/update_and_save.html', context={'form': upload_goods_form})
+
+
+def goods_list_hw(request):
+    goods = GoodsHw.objects.all()
+    return render(request, 'homework/goods.html', context={'goods_list': goods})

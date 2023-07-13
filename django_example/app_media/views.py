@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from app_media.forms import UploadFileForm, UploadFileFormHomework
+from app_media.forms import UploadFileForm, UploadFileFormHomework, MultiFileForm
 from django.views import View
-from app_media.models import DocumentForm,File
+from app_media.models import DocumentForm, File
 from django.http import HttpResponse
 from django.utils.encoding import smart_str
+
 
 # Create your views here.
 
@@ -31,7 +32,7 @@ def UploadFileHomework(request):
         if upload_file_form.is_valid():
             file = request.FILES['file']
             file_cont = file.chunks()
-            cleared_word_spl = 'Empty'
+            cleared_word_spl = ''
             for word in file_cont:
                 cleared_word = smart_str(word)
                 cleared_word_spl = cleared_word.strip().split()
@@ -49,6 +50,7 @@ def UploadFileHomework(request):
     }
     return render(request, 'upload_file2.html', context=context)
 
+
 def UploadFileToFolder(request):
     if request.method == 'POST':
         upload_file_from = DocumentForm(request.POST, request.FILES)
@@ -56,8 +58,23 @@ def UploadFileToFolder(request):
             upload_file_from.save()
             return redirect('/')
         else:
-           print (upload_file_from.errors)
+            print(upload_file_from.errors)
     else:
         upload_file_from = DocumentForm()
 
-    return render(request,'file_form_upload.html',context={'form':upload_file_from})
+    return render(request, 'file_form_upload.html', context={'form': upload_file_from})
+
+
+def UploadMultipleFiles(request):
+    if request.method == 'POST':
+        form = MultiFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            files = request.FILES.getlist('file_field')
+            for f in files:
+                instance = File(file=f)
+                instance.save()
+            return redirect('/')
+    else:
+        form = MultiFileForm()
+
+    return render(request, 'upload_files.html', context={'form': form})

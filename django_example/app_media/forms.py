@@ -12,3 +12,5 @@ class UploadFileFormHomework(forms.Form):
     pass
 
 
+class MultiFileForm(forms.Form):
+    file_field = forms.FileField(widget = forms.ClearableFileInput(attrs={'multiple':True}))

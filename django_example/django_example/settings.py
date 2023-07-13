@@ -126,4 +126,4 @@ SESSION_COOKIE_AGE = 30 * 24 * 60 * 60
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-#print(MEDIA_ROOT)
+MEDIA_URL ='/media/'
