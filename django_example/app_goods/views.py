@@ -83,7 +83,7 @@ def update_goods_with_saving(request):
     if request.method == "POST":
         update_goods_form = UploadPriceForm(request.POST, request.FILES)
         if update_goods_form.is_valid():
-            #update_goods_form.save()
+            # update_goods_form.save()
             file = request.FILES['file']
             price_file = update_goods_form.cleaned_data['file'].read()
             decoded = price_file.decode('utf-8').split('\n')
@@ -92,11 +92,11 @@ def update_goods_with_saving(request):
             new_filename = str(datetime.datetime.now().strftime('%d%m%y-%H-%M-%S')) + f'_{recent_filename}'
 
             fs = FileSystemStorage()
-            filename = fs.save(new_filename,file)
-            #file_url = fs.url(filename)
+            filename = fs.save(new_filename, file)
+            # file_url = fs.url(filename)
             for row in readed:
                 GoodsHw.objects.filter(code=row[0]).update(price=Decimal(row[1]))
-                GoodsHw.objects.filter(code=row[0]).update(file = filename)
+                GoodsHw.objects.filter(code=row[0]).update(file=filename)
             return redirect('/')
     else:
         upload_goods_form = UploadPriceForm()
