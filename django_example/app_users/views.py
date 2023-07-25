@@ -1,12 +1,14 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView, LogoutView
+from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from app_users.forms import AuthForm, ExtendedRegisterForm, UserExtendedHomework, RegisterForm
-from app_users.models import Profile,HomeworkModel
+from app_users.forms import AuthForm, ExtendedRegisterForm, UserExtendedHomework, RegisterForm, RestorePasswordForm
+from app_users.models import Profile, HomeworkModel
 # from app_users.models import TestUsers
 import datetime
+from django.contrib.auth.models import User
 
 from django.views import View
 
@@ -76,7 +78,7 @@ def register_view(request):  # не работает
     return render(request, 'users/register.html', context={'form': form})
 
 
-def another_register_view(request):  #  работает
+def another_register_view(request):  # работает
     if request.method == 'POST':
         form = ExtendedRegisterForm(request.POST)
         if form.is_valid():
@@ -116,11 +118,11 @@ class Register(View):
             credit_card = form.cleaned_data.get('credit_card')
             phone_number = form.cleaned_data.get('phone_number')
             HomeworkModel.objects.create(
-                user = user,
-                city = city,
-                date_of_birth =date_of_birth,
-                credit_card = credit_card,
-                phone_number = phone_number
+                user=user,
+                city=city,
+                date_of_birth=date_of_birth,
+                credit_card=credit_card,
+                phone_number=phone_number
             )
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -135,3 +137,27 @@ class Register(View):
 class AccountView(View):
     def get(self, request):
         return render(request, 'users/account.html')
+
+
+def restore_password(request):
+    if request.method == 'POST':
+        form = RestorePasswordForm(request.POST)
+        if form.is_valid():
+            new_password = User.objects.make_random_password()
+            user_email = form.cleaned_data['email']
+            current_user = User.objects.filter(email=user_email).first()
+            if current_user:
+                current_user.set_password(new_password)
+                current_user.save()
+            send_mail(
+                subject='Восстановление пароля',
+                message='Test',
+                from_email='admin@company.com',
+                recipient_list=[form.cleaned_data['email']]
+            )
+        return HttpResponse('Пиьмо было успешно отправлено')
+    restore_password_form = RestorePasswordForm()
+    context = {
+        'form': restore_password_form
+    }
+    return render(request, 'users/restore_password.html', context=context)
