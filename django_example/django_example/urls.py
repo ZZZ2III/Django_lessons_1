@@ -28,6 +28,6 @@ urlpatterns = [
                   path('goods/', include('app_goods.urls')),
                   path('app_logic/', include('app_logic.urls')),
                   path('app_pages/', include('app_pages.urls')),
-                  path('i18n/',include('django.conf.urls.i18n')),
+                  path('i18n', include('django.conf.urls.i18n')),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
