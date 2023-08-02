@@ -1,5 +1,5 @@
 class Item:
-    def __init__(self, name, description, weight,group):
+    def __init__(self, name, description, weight, group):
         self.name = name
         self.description = description
         self.weight = weight
@@ -10,5 +10,5 @@ class Item:
             'name': self.name,
             'description': self.description,
             'weight': self.weight,
-            'group':self.group,
+            'group': self.group,
         }

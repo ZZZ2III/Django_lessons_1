@@ -79,8 +79,14 @@ class ItemList(APIView):
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = ItemSerializer(dataclasses=request.data)
+        serializer = ItemSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        #print(serializer.data)
         return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class ItemGroupList(APIView):
+    def get(self,request):
+        pass
