@@ -5,6 +5,8 @@ from app_goods.serializer import ItemSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin, CreateModelMixin
 
 
 # Create your views here.
@@ -72,21 +74,21 @@ def items_list_groups(request):
         return JsonResponse({'groups': mass_for_groups}, safe=False)
 
 
-class ItemList(APIView):
+class ItemList(ListModelMixin, CreateModelMixin, GenericAPIView):
+    """Представление для получения списка товаров и создание нового товара."""
+    serializer_class =ItemSerializer
+    def get_queryset(self):
+        queryset = Item.objects.all()
+        item_name = self.request.query_params.get('name')
+        if item_name:
+            queryset = queryset.filter(name = item_name)
     def get(self, request):
-        items = Item.objects.all()
-        serializer = ItemSerializer(items, many=True)
-        return Response(serializer.data)
+        return self.list(request)
 
     def post(self, request):
-        serializer = ItemSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        #print(serializer.data)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return self.create(request)
 
 
 class ItemGroupList(APIView):
-    def get(self,request):
+    def get(self, request):
         pass

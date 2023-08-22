@@ -3858,3 +3858,55 @@ ip: 127.0.0.1
 time = 2023-07-04 16:11:46.872973
 URL: http://127.0.0.1:8000/news/login/ 
 method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:31.251010
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:31.566590
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:31.648362
+URL: http://127.0.0.1:8000/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:41.487056
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:41.619786
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:43.612893
+URL: http://127.0.0.1:8000/advertisement_two/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:43.632840
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:51.188061
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:51.319404
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:51.619431
+URL: None 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:56.573153
+URL: http://127.0.0.1:8000/admin/login/?next=/admin/ 
+method: POST
+ip: 127.0.0.1
+time = 2023-08-12 00:03:57.418766
+URL: http://127.0.0.1:8000/admin/login/?next=/admin/ 
+method: GET
+ip: 127.0.0.1
+time = 2023-08-12 00:03:57.526080
+URL: None 
+method: GET

@@ -42,13 +42,16 @@ INSTALLED_APPS = [
     'app_goods',
     'app_logic',
     'app_pages',
+    'app_shops',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
+    #'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -74,6 +77,11 @@ TEMPLATES = [
     },
 ]
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
 WSGI_APPLICATION = 'django_example.wsgi.application'
 
 # Database
@@ -120,10 +128,10 @@ USE_TZ = True
 LANGUAGES = [
     ('ru', 'Русский'),
     ('en', 'English'),
-    ('de','Deutche')
+    ('de', 'Deutche')
 ]
 
-LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'),]
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'), ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -136,4 +144,4 @@ SESSION_COOKIE_AGE = 30 * 24 * 60 * 60
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
